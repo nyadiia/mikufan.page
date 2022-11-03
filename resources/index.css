@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+    color: #ff006f;
+    font-family: monospace;
+    font-size: 1.25em;
+
+}
+
+p {
+    display: grid;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em;
+    text-indent: 2em;
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+
+a {
+    color: #be56ff;
+}
+
+a:hover {
+    color: #ff006f
+}
+
+.banner {
+    display: grid;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em;
+    background-image: linear-gradient(
+        -90deg,
+        #ff006f, #be56ff);
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.animeart {
+    display: grid;
+    justify-content: center;
+    font-family: "MS PGothic", "ＭＳ Ｐゴシック", "Trebuchet MS", Verdana, Futura, Arial, Helvetica, sans-serif;
+    /* font-style: monospace; */
+    font-size: 1em;z
+    charset=UTF-8;
+    background-image: url(./colorfuck.jpg);
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
