@@ -1,6 +1,6 @@
 body {
-    background-color: black;
-    color: #ff006f;
+    background-color: #f4efe6;
+    color: #43b2bd;
     font-family: monospace;
     font-size: 1.25em;
 
@@ -18,11 +18,11 @@ p {
 }
 
 a {
-    color: #be56ff;
+    color: #43b2bd;
 }
 
 a:hover {
-    color: #ff006f
+    color: #38d963
 }
 
 .banner {
@@ -30,10 +30,10 @@ a:hover {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    width: 50em;
+    width: 60em;
     background-image: linear-gradient(
         -90deg,
-        #ff006f, #be56ff);
+        #38d963, #43b2bd);
     background-repeat: repeat;
     background-clip: text;
     -webkit-background-clip: text;
