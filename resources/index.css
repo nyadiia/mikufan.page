@@ -28,6 +28,7 @@ a:hover {
 .banner {
     display: grid ;
     justify-content: center;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(
