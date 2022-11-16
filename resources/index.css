@@ -26,11 +26,10 @@ a:hover {
 }
 
 .banner {
-    display: grid | inline-grid;
+    display: grid ;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    width: 57em;
     background-image: linear-gradient(
         -90deg,
         #38d963, #43b2bd);
