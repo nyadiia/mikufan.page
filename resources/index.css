@@ -1,5 +1,5 @@
 body {
-    background-color: #f4efe6;
+    background-color: black;
     color: #43b2bd;
     font-family: monospace;
     font-size: 1.25em;
@@ -26,11 +26,11 @@ a:hover {
 }
 
 .banner {
-    display: grid;
+    display: grid | inline-grid;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    width: 60em;
+    width: 50em;
     background-image: linear-gradient(
         -90deg,
         #38d963, #43b2bd);
@@ -44,15 +44,10 @@ a:hover {
 
 .animeart {
     display: grid;
+    grid-template-columns: ...  ...;
+    grid-template-rows: ...  ...;
     justify-content: center;
     font-family: "MS PGothic", "ＭＳ Ｐゴシック", "Trebuchet MS", Verdana, Futura, Arial, Helvetica, sans-serif;
     /* font-style: monospace; */
     font-size: 1em;
-    background-image: url(./colorfuck.jpg);
-    background-repeat: repeat;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
 }
