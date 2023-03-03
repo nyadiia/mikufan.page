@@ -9,7 +9,10 @@ build_search_index = false
 
 theme = "archie-zola"
 
+
 title = "nyadiia"
+description = "nadia/winter's personal blog and projects site"
+
 taxonomies = [{ name = "tags" }]
 
 [markdown]
@@ -21,9 +24,6 @@ highlight_code = false
 # Put all your custom variables here
 # control dark mode: auto | dark | toggle
 mode = "toggle"
-
-# subtitle will show under the title in index page
-subtitle = "A zola theme forked from [archie](https://github.com/athul/archie)"
 
 # if set true, will use external CDN resource to load font and js file
 useCDN = false
