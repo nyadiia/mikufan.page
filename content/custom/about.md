@@ -5,7 +5,7 @@ path = "about"
 +++
 
 ## hey!
-This is my funny little website where I might put some stuff. I'm doing mostly Linux stuff but I want to start programming again. No matter where you go, everyone's connected! If you have any recommendations on what I should program or what I should watch, please tell me!
+this is my funny little website where i'll probably blog some things. i'm doing mostly Linux stuff but I want to start programming again. if you have any recommendations on what I should program or what I should watch, please tell me!
 
 ## contact
 haaiiii, i'm happy you wanna talk to me! My discord is nyadiia#0074  
