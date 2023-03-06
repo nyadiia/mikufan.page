@@ -1,7 +1,7 @@
 +++
 title = "new website... again!"
 date = "2023-03-05"
-description = ""
+description = "rebuilt my website around zola using the archie-zola theme. also some updates on what i've been doing with 2 of my person projects, tehda and minne. planning on doing some new stuff with miku.mikufan.page"
 
 [taxonomies]
 tags = ["meta", "update"]
@@ -18,6 +18,6 @@ i'm going to eventually add a projects tag to put both of my ongoing projects, [
 it has very basic functionality, you can search and run things, but we're working on adding a bunch including theming, different modes, etc. minne is currently my personal project. i made it because i wanted to have a todo list but i didn't like over overbearing [taskwarrior](https://taskwarrior.org/) looked and i just wanted something to be a little reminder without a ton of features. i also looked at [todoist](https://todoist.com/) but it felt like wayyy too much.
 
 ## update on miku.mikufan.page
-i'm planning on reworking this, dw. i'm still not sure if i want it to be only ascii art or if i want to expand it to just being collection of cool miku images. i might accept pull requests on the [website's repository](https://github.com/nyadiia/mikufan.page) a little something like [cat-milk/Anime-Girls-Holding-Programming-Books](https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books) except not with an intentionally bad naming scheme.  
+i'm planning on reworking this, dw. i'm still not sure if i want it to be only ascii art or if i want to expand it to just being collection of cool miku images. i might accept pull requests on the [website's repository](https://github.com/nyadiia/mikufan.page) a little something like [cat-milk/Anime-Girls-Holding-Programming-Books](https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books) except not with an intentionally bad naming scheme. i may also better integrate it with the main site instead of having it on it's own subdomain, maybe moving it to `https://mikufan.page/miku` instead.
   
 that's all for now, have a good day! :3
