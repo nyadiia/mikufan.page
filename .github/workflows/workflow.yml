@@ -18,7 +18,7 @@ jobs:
         run: /snap/bin/zola build
 
       - name: Copy to deployment folder
-        run: cp -r ./public/ ${{secrets.COPY_TO_FOLDER}}
+        run: cp -r ./public/ /var/www/main
 
       - name: Reload nginx
         run: systemctl reload nginx
