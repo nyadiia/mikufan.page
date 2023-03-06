@@ -20,5 +20,5 @@ jobs:
           BUILD_ONLY: true
 
       - name: Copy folder to where nginx expects it to be
-        run: cp -r ${{secrets.COPY_FROM_FOLDER}} ${{secrets.COPY_TO_FOLDER}}
+        run: cp -r ./public/ ${{secrets.COPY_TO_FOLDER}}
       
