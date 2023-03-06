@@ -1,5 +1,9 @@
 # The URL the site will be built for
-base_url = "https://mikufan.page"
+base_url = "//archie-zola.vercel.app/"
+
+# The site title and description; used in feeds by default.
+title = "archie-zola"
+description = "A zola theme forked from [archie](https://github.com/athul/archie)"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -7,30 +11,33 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
-theme = "archie-zola-standalone"
-
-title = "nyadiia"
-description = "nadia/winter's personal blog and projects site"
-
 taxonomies = [{ name = "tags" }]
+
+default_language = "en"
 
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = false
+highlight_code = true
+
+highlight_theme = "OneHalfLight"
 
 [extra]
-# Put all your custom variables here
+
 # control dark mode: auto | dark | toggle
 mode = "toggle"
 
-# if set true, will use external CDN resource to load font and js file
+# interal CDN resource
 useCDN = false
 
 favicon = "/icon/favicon.png"
 
-# show in the footer
-copyright = "nyadiia"
+copyright = "keith"
+
+ga = "G-6YGDB8SLBT"
+
+[extra.translations]
+languages = [{name = "en", url = "/"}]
 
 [[extra.translations.en]]
 show_more = "Read more ⟶"
@@ -51,6 +58,14 @@ menus = [
 [[extra.social]]
 icon = "github"
 name = "GitHub"
-url = "https://github.com/nyadiia"
+url = "https://github.com/XXXMrG/archie-zola"
 
+[[extra.social]]
+icon = "twitter"
+name = "Twitter"
+url = "https://github.com/XXXMrG/"
 
+[[extra.social]]
+icon = "gitlab"
+name = "GitLab"
+url = "https://gitlab.com/your-name/"
