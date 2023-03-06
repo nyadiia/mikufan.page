@@ -17,7 +17,7 @@ jobs:
       - name: Build Zola 
         uses: shalzz/zola-deploy-action@v0.17.1
         env:
-          BUILD_DIR: build
+          BUILD_DIR: docs
           BUILD_ONLY: true
       - name: Copy folder to where nginx expects it to be
         run: cp -r ${{secrets.COPY_FROM_FOLDER}} ${{secrets.COPY_TO_FOLDER}}
