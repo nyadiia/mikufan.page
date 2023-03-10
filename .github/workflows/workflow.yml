@@ -15,10 +15,10 @@ jobs:
         uses: actions/checkout@v3.0.0
 
       - name: Build Zola 
-        run: /snap/bin/zola build
+        run: /snap/bin/zola build -o main
 
       - name: Copy to deployment folder
-        run: cp -rf ./public/ /var/www/main
+        run: cp -rf main /var/www/
 
       - name: Reload nginx
         run: systemctl reload nginx
