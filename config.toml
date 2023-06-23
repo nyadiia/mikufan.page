@@ -1,54 +1,81 @@
-# The URL the site will be built for
+theme = "tabi"
+
 base_url = "https://mikufan.page"
-
-# Whether to automatically compile all Sass files in the sass directory
+title = "~/mikufan.page"
+description = "tabi is a fast, lightweight, and modern Zola theme with multi-language support, optional JavaScript, and a perfect Lighthouse score."
+generate_feed = true
 compile_sass = true
+minify_html = true
 
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
-
-theme = "archie-zola"
-
-title = "nyadiia"
-description = "nadia/winter's personal blog and projects site"
-
-taxonomies = [{ name = "tags" }]
-
-[markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = false
-
-[extra]
-# Put all your custom variables here
-# control dark mode: auto | dark | toggle
-mode = "toggle"
-
-# if set true, will use external CDN resource to load font and js file
-useCDN = false
-
-favicon = "/icon/favicon.png"
-
-# show in the footer
-copyright = "nyadiia"
-
-[[extra.translations.en]]
-show_more = "Read more ⟶"
-previous_page = "← Previous"
-next_page = "Next →"
-posted_on = "on "
-posted_by = "Published by"
-read_time = "minute read"
-all_tags = "All tags"
-menus = [
-    { name = "Home", url = "/", weight = 2 },
-    { name = "All posts", url = "/posts", weight = 2 },
-    { name = "About", url = "/about", weight = 3 },
-    { name = "Tags", url = "/tags", weight = 4 },
+taxonomies = [
+    {name = "tags", feed = true},
 ]
 
-# config social icon info in the footer
-[[extra.social]]
-icon = "github"
-name = "GitHub"
-url = "https://github.com/nyadiia"
+[markdown]
+external_links_target_blank = true
+highlight_code = true
+highlight_theme = "css"
+
+default_language = "en"
+
+[extra]
+
+# Enable JavaScript theme toggler for dark/light mode (and automatic switching).
+# The default setting is the light theme.
+theme_switcher = true
+
+# Date format used when listing posts (main page, /blog section, tag posts list…)
+# Default is "6th July 2049" in English and "%d %B %Y" in other languages.
+long_date_format = "%d %B %Y"
+
+# Date format used for blog posts.
+# Default is "31st Dec 2011".
+short_date_format = ""
+
+# Custom separator used in title tag and posts metadata (between date, time to read, and tags).
+separator = "•"
+
+# Full path after the base URL required. So if you were to place it in "static" it would be "/favicon.ico"
+favicon = "/favicon.ico/"
+
+# Add an emoji here to use it as favicon.
+# Compatibility: https://caniuse.com/link-icon-svg
+favicon_emoji = ""
+
+# This header image is used for SEO. For example if you were to share an image via Messenger/Instagram/Twitter a preview picture is also presented
+headerImage = ""
+
+menu = [
+    { name = "blog", url = "blog/" },
+    { name = "archive", url = "archive/" },
+    { name = "tags", url = "tags/" },
+]
+
+# The RSS icon will be shown if (1) it's enabled and (2) the following variable is set to true.
+feed_icon = true
+
+# The icons available can be found in "social_icons" in the "static" folder.
+socials = [
+    { name = "github", url = "https://github.com/nyadiia/", icon = "github" },
+    { name = "mastodon", url = "https://tech.lgbt/@nyadiia/", icon = "mastodon" },
+]
+
+# Custom security headers. What urls should your website be able to connect to?
+# You need to specify the CSP and the URLs associated with the directive.
+# Useful if you want to load remote content safely (embed YouTube videos, which needs frame-src, for example).
+# Default directive is self.
+# Default config, allows for https remote images and embedding YouTube and Vimeo content.
+# This configuration (along with the right webserver settings) gets an A+ in Mozilla's Observatory: https://observatory.mozilla.org
+allowed_domains = [
+    { directive = "font-src", domains = ["'self'", "data:"] },
+    { directive = "img-src", domains = ["'self'", "https://*", "data:"] },
+    { directive = "script-src", domains = ["'self'"] },
+    { directive = "style-src", domains = ["'self'"] },
+    { directive = "frame-src", domains = ["player.vimeo.com", "https://www.youtube-nocookie.com"] },
+]
+
+# Custom subset of characters for the header.
+# If set to true, the `static/custom_subset.css` file will be loaded first.
+# This avoids a flashing text issue in Firefox.
+# Please see https://welpo.github.io/tabi/blog/custom-font-subset/ to learn how to create this file.
+custom_subset = true

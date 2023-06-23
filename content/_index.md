@@ -1,4 +1,15 @@
 +++
-paginate_by = 3
+path = "/"
+title = "Latest posts"
 sort_by = "date"
+template = "section.html"
+
+[extra]
+header = {title = "hey! i'm nyadiia :3", img = "$BASE_URL/img/icon.gif" }
+section_path = "blog/_index.md"
+max_posts = 4
 +++
+
+this is my funny little website where i'll probably blog some things. i'm doing mostly Linux stuff but I want to start programming again. if you have any recommendations on what i should program or what I should watch, please tell me!
+
+[here's where i stole the pfp from](https://twitter.com/PixelHoo/status/1639655881691521024)
