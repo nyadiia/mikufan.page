@@ -1,14 +1,14 @@
 +++
 title = "new website... again!"
 date = "2023-03-05"
-description = "rebuilt my website around zola using the archie-zola theme. also some updates on what i've been doing with 2 of my person projects, tehda and minne. planning on doing some new stuff with miku.mikufan.page"
+description = "rebuilt my website around zola using the archie-zola theme. also some updates on what i've been doing with 2 of my personal projects, tehda and minne. planning on doing some new stuff with miku.mikufan.page"
 
 [taxonomies]
 tags = ["meta", "update"]
 +++
 
 ## but.. why?
-rebuilt my website again but this time based around the [zola](https://github.com/getzola/zola) static site generator which allows me to write blogs easier ~~also because it's written in Rust~~. originally i just wanted my website to look cool and then be a blog as a secondary thing but i think this redesign might stick.
+rebuilt my website again but this time based around the [zols ca](https://github.com/getzola/zola) static site generator which allows me to write blogs easier ~~also because it's written in Rust~~. originally i just wanted my website to look cool and then be a blog as a secondary thing but i think this redesign might stick.
 
 ## theming
 i mayyy go back to the old redesign but that's a lot of effort to rewrite an entire theme from "scratch". i'm currently using [archie-zola](https://github.com/XXXMrG/archie-zola) as the theme. i wanted to use [terminimal](https://github.com/pawroman/zola-theme-terminimal) but i already know someone that is using that theme and i don't want them to think i'm just copying off of them. also, i really like how this one actually shows the little header things in the blog post.
