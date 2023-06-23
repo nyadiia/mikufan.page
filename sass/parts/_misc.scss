@@ -1,0 +1,164 @@
+.draft-label {
+    color: var(--hover-color);
+    text-decoration: none;
+    padding: 2px 4px;
+    margin-left: 6px;
+    background-color: var(--primary-color);
+}
+
+.article-title {
+    color: var(--text-color-high-contrast);
+    display: block;
+    font-size: 2rem;
+    font-weight: 550;
+    line-height: 3rem;
+}
+
+iframe {
+    border: none;
+    display: block;
+    aspect-ratio: 16/9;
+    width: 100vmin;
+    max-width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 3vmin;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.toc-container {
+    margin-bottom: 4vmin;
+}
+
+.title-container {
+    padding-bottom: 15px;
+}
+
+.bottom-divider {
+    border-bottom: var(--divider-color) solid 0.5px;
+}
+
+::-moz-selection {
+    background: var(--primary-color);
+    color: var(--hover-color);
+    text-shadow: none;
+}
+
+::selection {
+    background: var(--primary-color);
+    color: var(--hover-color);
+}
+
+.nav.tags {
+    display: inline-block;
+}
+
+p {
+    line-height: 1.5;
+}
+
+hr {
+    border: 0;
+    border-top: 3px solid var(--border-color);
+    margin: 1em 0;
+}
+
+blockquote {
+    border-left: 0.2rem solid var(--primary-color);
+    color: var(--quote-color);
+    margin: 0;
+    padding-left: 1em;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: inherit;
+    font-weight: inherit;
+    position: relative;
+}
+
+a:hover {
+    background-color: var(--primary-color);
+    color: var(--hover-color);
+}
+
+a:not(.no-hover-padding)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -0.15em;
+    right: -0.15em;
+    z-index: -1;
+    background-color: var(--primary-color);
+    opacity: 0;
+}
+
+a:not(.no-hover-padding):hover::before {
+    opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .list > ul {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+table {
+    justify-self: center;
+    font: inherit;
+    overflow: hidden;
+    border-style: hidden !important;
+    margin: 2rem 0;
+    min-width: 400px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 13rem;
+}
+
+table thead tr {
+    background-color: var(--primary-color);
+    color: var(--hover-color);
+    text-align: left;
+}
+
+table th,
+table td {
+    padding: 0.5em 0.7em;
+    font-family: 'Source Serif Pro', serif;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--bg-0);
+}
+
+.footnote-reference {
+    font-family: var(--serif-font);
+    font-size: 0.7rem;
+}
+
+.footnote-definition {
+    margin-top: 3.5rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+
+    sup {
+        font-family: var(--serif-font);
+        font-size: 0.75rem;
+        margin-right: 0.15rem;
+    }
+
+    p {
+        display: inline;
+    }
+}
+
+.references p {
+    text-indent: -2.4rem;
+    margin-left: 2.4rem;
+}
