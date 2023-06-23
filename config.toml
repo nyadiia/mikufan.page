@@ -36,7 +36,7 @@ short_date_format = ""
 separator = "•"
 
 # Full path after the base URL required. So if you were to place it in "static" it would be "/favicon.ico"
-favicon = "/favicon.ico/"
+favicon = "/favicon.ico"
 
 # Add an emoji here to use it as favicon.
 # Compatibility: https://caniuse.com/link-icon-svg
