@@ -1,6 +1,4 @@
-# Simple CD
-
-name: push_cd
+name: Zola Build and Deploy
 
 on:
   push:
@@ -12,7 +10,9 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.0.0
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
       - name: Build Zola 
         run: /snap/bin/zola build -o main
@@ -28,7 +28,9 @@ jobs:
     if: github.ref != 'refs/heads/main'
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.0.0
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
-      - name: Build Zola 
-        run: /snap/bin/zola build
+      - name: Check Zola Build 
+        run: /snap/bin/zola check --drafts
