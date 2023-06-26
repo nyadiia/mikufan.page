@@ -12,31 +12,31 @@ hi! the lack of posts here has mostly been from a, being in college and b, not h
 
 ## another new theme?
 yeah, i liked the old one but i honestly just wanted to copy [Xe Iaso's blog](https://https://xeiaso.net/) because i really like how it looks ~~and they look really cool~~. as a benefit, i know a lot more about optimization and website things now because of this, for example, the home page has a webp instead of a gif because it provides a ~40% speedup! i also learned that http compression was a thing and i prompty turned that on in my `nginx.conf` with
-```nginx
+```conf
 gzip on;
 gzip_vary on;
 gzip_min_length 10240;
 gzip_proxied expired no-cache no-store private auth;
 gzip_types
-  application/atom+xml
-  application/geo+json
-  application/javascript
-  application/x-javascript
-  application/json
-  application/ld+json
-  application/manifest+json
-  application/rdf+xml
-  application/rss+xml
-  application/xhtml+xml
-  application/xml
-  font/eot
-  font/otf
-  font/ttf
-  image/svg+xml
-  text/css
-  text/javascript
-  text/plain
-  text/xml;
+    application/atom+xml
+    application/geo+json
+    application/javascript
+    application/x-javascript
+    application/json
+    application/ld+json
+    application/manifest+json
+    application/rdf+xml
+    application/rss+xml
+    application/xhtml+xml
+    application/xml
+    font/eot
+    font/otf
+    font/ttf
+    image/svg+xml
+    text/css
+    text/javascript
+    text/plain
+    text/xml;
 gzip_disable "MSIE [1-6]\.";
 ```
   
@@ -47,7 +47,7 @@ i also don't think i'll ever get around to finishing, hell, starting [minne](htt
 
 ## miku??
 oh yeah i figured out how to do websites on other ports. it's on [https://mikufan.page:39](https://mikufan.page:39). i did it adding this in my nginx configs
-```nginx
+```conf
 server {
     server_name mikufan.page;
     root /var/www/miku;
