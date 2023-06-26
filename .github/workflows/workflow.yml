@@ -18,7 +18,8 @@ jobs:
         run: /snap/bin/zola build -o www
 
       - name: Copy to deployment folder
-        run: cp -rf www ~/webserver/config/nginx/
+        run: chown nyadiia:nyadiia www
+        run: cp -rf www /home/nyadiia/webserver/config/
 
   build:
     runs-on: self-hosted
