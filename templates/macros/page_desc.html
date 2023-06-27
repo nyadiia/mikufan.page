@@ -11,7 +11,7 @@
     </div>
     <div class="image-container-home">
         {%- if img_alt != "" -%}
-        <img alt="my pfp :3" class="banner-home-img" src={{ desc.img | replace(from="$BASE_URL", to=config.base_url) | safe}} />
+        <img alt="{{ img_alt }}" class="banner-home-img" src={{ desc.img | replace(from="$BASE_URL", to=config.base_url) | safe}} />
         {%- endif -%}
         {%- if img_source != "" -%}
         <small><a href="{{ img_source }}" target="_blank">image source</a></small>

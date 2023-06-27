@@ -49,6 +49,7 @@ menu = [
     { name = "blog", url = "blog/" },
     { name = "archive", url = "archive/" },
     { name = "tags", url = "tags/" },
+    { name = "links", url = "links/" },
 ]
 
 # The RSS icon will be shown if (1) it's enabled and (2) the following variable is set to true.
@@ -64,7 +65,7 @@ socials = [
 
 page_source = "https://github.com/nyadiia/mikufan.page"
 img_source = "https://twitter.com/PixelHoo/status/1639655881691521024"
-img_alt = "my pfp :3"
+img_alt = "my pfp :3 [crt overlay synthwave girl in futuristic neon city, flipping between day and night]"
 
 # Custom security headers. What urls should your website be able to connect to?
 # You need to specify the CSP and the URLs associated with the directive.
@@ -74,8 +75,8 @@ img_alt = "my pfp :3"
 # This configuration (along with the right webserver settings) gets an A+ in Mozilla's Observatory: https://observatory.mozilla.org
 allowed_domains = [
     { directive = "font-src", domains = ["'self'", "data:"] },
-    { directive = "img-src", domains = ["'self'", "https://*", "data:"] },
-    { directive = "script-src", domains = ["'self'"] },
+    { directive = "img-src", domains = ["'self'", "https://*", "data:", "https://miku.goatcounter.com/count"] },
+    { directive = "script-src", domains = ["'self'", "https://gc.zgo.at"] },
     { directive = "style-src", domains = ["'self'"] },
     { directive = "frame-src", domains = ["player.vimeo.com", "https://www.youtube-nocookie.com"] },
 ]
