@@ -67,6 +67,17 @@ page_source = "https://github.com/nyadiia/mikufan.page"
 img_source = "https://twitter.com/PixelHoo/status/1639655881691521024"
 img_alt = "my pfp :3 [crt overlay synthwave girl in futuristic neon city, flipping between day and night]"
 
+88x31 = [
+    { name = "miku_approved", img = "miku.gif" },
+    { name = "itty", img = "nekojiru2.gif" },
+    { name = "debain_powered", img = "powered-by-debian.gif" },
+    { name = "rainbow_flag", img = "rainbow_bev.gif" },
+    { name = "trans_flag", img = "trans.png" },
+    { name = "sinewave", img = "sinewave.gif" },
+    { name = "trans_rights_now", img = "transnow2.gif" },
+    { name = "seed_your_torrents!", img = "seedyourtorrents.gif" },
+    { name = "no_web3", img = "web3.gif" },
+]
 # Custom security headers. What urls should your website be able to connect to?
 # You need to specify the CSP and the URLs associated with the directive.
 # Useful if you want to load remote content safely (embed YouTube videos, which needs frame-src, for example).
