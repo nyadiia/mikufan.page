@@ -10,3 +10,5 @@ zola build
 ```  
 host the `public` folder  
 profit
+
+to all employers/others of that type, [nyadiia.dev](https://nyadiia.dev) will show off what i can do much better than this mostly silly blog.
