@@ -85,9 +85,10 @@ img_alt = "my pfp :3 [crt overlay synthwave girl in futuristic neon city, flippi
 # Default config, allows for https remote images and embedding YouTube and Vimeo content.
 # This configuration (along with the right webserver settings) gets an A+ in Mozilla's Observatory: https://observatory.mozilla.org
 allowed_domains = [
+    { directive = "default-src", domains = ["'self'"] },
     { directive = "font-src", domains = ["'self'", "data:"] },
     { directive = "img-src", domains = ["'self'", "https://*", "data:", "https://miku.goatcounter.com/count"] },
-    { directive = "script-src", domains = ["'self'", "https://gc.zgo.at"] },
+    { directive = "script-src", domains = ["'self'", "http://gc.zgo.at"] },
     { directive = "style-src", domains = ["'self'"] },
     { directive = "frame-src", domains = ["player.vimeo.com", "https://www.youtube-nocookie.com"] },
 ]
