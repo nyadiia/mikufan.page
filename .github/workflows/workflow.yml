@@ -15,7 +15,7 @@ jobs:
           submodules: recursive
 
       - name: Build Zola 
-        run: /snap/bin/zola build -o www
+        run: /usr/bin/zola build -o www
 
       - name: Copy to deployment folder
         run: |
@@ -32,4 +32,4 @@ jobs:
           submodules: recursive
 
       - name: Check Zola Build 
-        run: /snap/bin/zola check --drafts
+        run: /usr/bin/zola check --drafts
