@@ -60,6 +60,7 @@ socials = [
     { name = "github", url = "https://github.com/nyadiia/", icon = "github" },
     { name = "mastodon", url = "https://tech.lgbt/@nyadiia/", icon = "mastodon" },
     { name = "twitter", url = "https://twitter.com/pastelbvn/", icon = "twitter" },
+    { name = "tumblr", url = "https://nyadiia.tumblr.com/", icon = "tumblr" },
     { name = "email", url = "mailto:nyadiia@pm.me", icon = "email" },
 ]
 
