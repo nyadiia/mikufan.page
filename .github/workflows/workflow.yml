@@ -32,4 +32,4 @@ jobs:
           submodules: recursive
 
       - name: Check Zola Build 
-        run: /usr/bin/zola check --drafts
+        run: /usr/bin/zola build
