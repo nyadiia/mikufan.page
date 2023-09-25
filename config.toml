@@ -94,6 +94,7 @@ show_reading_time = true
     { name = "seed_your_torrents!", img = "seedyourtorrents.gif" },
     { name = "no_web3", img = "web3.gif" },
 ]
+stylesheets = ["buttons.css"]
 # Custom security headers. What urls should your website be able to connect to?
 # You need to specify the CSP and the URLs associated with the directive.
 # Useful if you want to load remote content safely (embed YouTube videos, which needs frame-src, for example).
