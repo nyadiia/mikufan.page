@@ -23,10 +23,13 @@ default_language = "en"
 # Enable JavaScript theme toggler for dark/light mode (and automatic switching).
 # The default setting is the light theme.
 theme_switcher = true
+default_theme = "dark"
+browser_theme_color = ["#ff5599", "#ff0066"]
+skin = "nyadiia"
 
 # Date format used when listing posts (main page, /blog section, tag posts list…)
 # Default is "6th July 2049" in English and "%d %B %Y" in other languages.
-long_date_format = "%d %B %Y"
+long_date_format = "%Y-%m-%d"
 
 # Date format used for blog posts.
 # Default is "31st Dec 2011".
@@ -43,7 +46,7 @@ favicon = "/strawby.gif"
 favicon_emoji = ""
 
 # This header image is used for SEO. For example if you were to share an image via Messenger/Instagram/Twitter a preview picture is also presented
-headerImage = ""
+social_media_card = "img/banner.jpg"
 
 menu = [
     { name = "blog", url = "blog/" },
@@ -61,10 +64,24 @@ socials = [
     { name = "mastodon", url = "https://tech.lgbt/@nyadiia/", icon = "mastodon" },
     { name = "twitter", url = "https://twitter.com/pastelbvn/", icon = "twitter" },
     { name = "tumblr", url = "https://nyadiia.tumblr.com/", icon = "tumblr" },
-    { name = "email", url = "mailto:nyadiia@pm.me", icon = "email" },
 ]
 
-page_source = "https://github.com/nyadiia/mikufan.page"
+email = "bnlhZGlpYUBwbS5tZQ=="
+encode_plaintext_email = true
+
+remote_repository_url = "https://github.com/nyadiia/mikufan.page"
+remote_repository_git_platform = "auto"  # Defaults to "auto".
+remote_repository_branch = "main"  # Defaults to "main".
+
+show_remote_changes = true  # Defaults to true.
+show_remote_source = true  # Defaults to true.
+
+# Add a "copy" button to codeblocks (loads ~700 bytes of JavaScript).
+# Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
+copy_button = true
+
+show_reading_time = true
+
 img_source = "https://twitter.com/PixelHoo/status/1639655881691521024"
 img_alt = "my pfp :3 [crt overlay synthwave girl in futuristic neon city, flipping between day and night]"
 

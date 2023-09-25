@@ -3,8 +3,12 @@ path = "/links"
 title = "Links"
 date = "2023-06-26"
 
-description = "a bunch of links for oomfies and things i find cool :3"
+description = "a bunch of links for oomfies, things i find cool, and credits! :3"
 +++
+
+# credits
+- banner: [jazzy on twitter](https://twitter.com/Jazzboys1/status/1164596920704229376)
+- icon: [pixel hoo on twitter](https://twitter.com/PixelHoo/status/1639655881691521024)
 
 # oomfies!!
 list of oomfies/people i find cool can be found here :3
@@ -23,3 +27,4 @@ some cool places ( virtual or physical, mostly both ) and some people that i fin
   ll probably make a post about it
 - [cyberia.club](https://cyberia.club)
   - technically i'm a member but i don't really hang out there too much, really cool people tho and would highly recommend joining their [matrix channels](https://cyberia.club/matrix)
+
