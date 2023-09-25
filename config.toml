@@ -18,6 +18,7 @@ highlight_theme = "css"
 
 default_language = "en"
 
+
 [extra]
 
 # Enable JavaScript theme toggler for dark/light mode (and automatic switching).
@@ -82,9 +83,6 @@ copy_button = true
 
 show_reading_time = true
 
-img_source = "https://twitter.com/PixelHoo/status/1639655881691521024"
-img_alt = "my pfp :3 [crt overlay synthwave girl in futuristic neon city, flipping between day and night]"
-
 88x31 = [
     { name = "miku_approved", img = "miku.gif" },
     { name = "itty", img = "nekojiru2.gif" },
@@ -105,9 +103,9 @@ img_alt = "my pfp :3 [crt overlay synthwave girl in futuristic neon city, flippi
 allowed_domains = [
     { directive = "font-src", domains = ["'self'", "data:"] },
     { directive = "img-src", domains = ["'self'", "https://*", "data:", "https://miku.goatcounter.com/count/*"] },
-    { directive = "script-src", domains = ["'self'", "http://gc.zgo.at"] },
+    { directive = "script-src", domains = ["'self'", "http://gc.zgo.at"] }, # finally made csp work for this
     { directive = "style-src", domains = ["'self'"] },
-    { directive = "frame-src", domains = ["player.vimeo.com", "https://www.youtube-nocookie.com"] },
+    { directive = "frame-src", domains = ["https://www.youtube-nocookie.com"] },
 ]
 
 # Custom subset of characters for the header.
