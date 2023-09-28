@@ -107,6 +107,7 @@ allowed_domains = [
     { directive = "script-src", domains = ["'self'", "http://gc.zgo.at"] }, # finally made csp work for this
     { directive = "style-src", domains = ["'self'"] },
     { directive = "frame-src", domains = ["https://www.youtube-nocookie.com"] },
+    { directive = "connect-src", domains = ["https://miku.goatcounter.com/*"] },
 ]
 
 # Custom subset of characters for the header.
