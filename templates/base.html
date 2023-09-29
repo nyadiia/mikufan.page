@@ -6,31 +6,30 @@
 {% import "macros/table_of_contents.html" as macros_toc %}
 {% import "macros/translate.html" as macros_translate %}
 
-{# Load the internationalisation data for the current language from 
+{# Load the internationalisation data for the current language from
 the .toml files in the user's '/i18n' folder, falling back to the theme's.
 This variable will hold all the text strings for the language #}
 {%- set language_strings = load_data(path="i18n/" ~ lang ~ '.toml', required=false) -%}
 {%- if not language_strings -%}
-    {%- set language_strings = load_data(path="themes/tabi/i18n/" ~ lang ~ ".toml", required=false) -%}
+{%- set language_strings = load_data(path="themes/tabi/i18n/" ~ lang ~ ".toml", required=false) -%}
 {%- endif -%}
 
 
 <!DOCTYPE html>
-<html lang="{{ lang }}" {% if config.extra.default_theme -%}
-    data-theme="{{config.extra.default_theme}}"
-{%- endif -%}>
+<html lang="{{ lang }}" {% if config.extra.default_theme -%} data-theme="{{config.extra.default_theme}}" {%- endif -%}>
 
 {% include "partials/header.html" %}
 
 <body>
-    <script data-goatcounter="https://miku.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://miku.goatcounter.com/count" async src="//gc.zgo.at/count.v3.js"
+        crossorigin="anonymous"
+        integrity="sha384-QGgNMMRFTi8ul5kHJ+vXysPe8gySvSA/Y3rpXZiRLzKPIw8CWY+a3ObKmQsyDr+a"></script>
     {% include "partials/nav.html" %}
     <div class="content">
 
         {# Post page is the default #}
         {% block main_content %}
-            Nothing here?!
+        Nothing here?!
         {% endblock main_content %}
     </div>
     {% include "partials/footer.html" %}
