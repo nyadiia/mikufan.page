@@ -1,5 +1,5 @@
 +++
-title = "new website... again!"
+title = "updates and security!"
 date = 2023-09-29
 description = "website update! this time with added security and comments!"
 
