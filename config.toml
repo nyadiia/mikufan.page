@@ -102,12 +102,12 @@ stylesheets = ["buttons.css"]
 # Default config, allows for https remote images and embedding YouTube and Vimeo content.
 # This configuration (along with the right webserver settings) gets an A+ in Mozilla's Observatory: https://observatory.mozilla.org
 allowed_domains = [
+    { directive = "default-src", domains = ["'self'", "https://miku.goatcounter.com/*"] },
     { directive = "font-src", domains = ["'self'", "data:"] },
     { directive = "img-src", domains = ["'self'", "https://*", "data:", "https://miku.goatcounter.com/*"] },
     { directive = "script-src", domains = ["'self'", "http://gc.zgo.at"] }, # finally made csp work for this
     { directive = "style-src", domains = ["'self'"] },
     { directive = "frame-src", domains = ["https://www.youtube-nocookie.com"] },
-    { directive = "connect-src", domains = ["https://miku.goatcounter.com/*"] },
 ]
 
 # Custom subset of characters for the header.
