@@ -114,10 +114,23 @@ allowed_domains = [
 enabled_for_all_posts = true
 automatic_loading = true
 website_id = "9690"
-page_id_is_slug = true
+page_id_is_slug = false
 lang = ""
 page_author = "bnlhZGlpYUBwbS5tZQ=="  # Email (or base64 encoded email) of the author.
 lazy_loading = true
+
+# [extra.isso]
+# enabled_for_all_posts = false
+# automatic_loading = true
+# endpoint_url = "http://127.0.0.1:8080"  # URL to Isso host.
+# page_id_is_slug = true
+# lang = "english"
+# max_comments_top = "inf"
+# max_comments_nested = "5"
+# avatar = true
+# voting = true
+# page_author_hashes = ""
+# lazy_loading = true
 
 
 # Custom subset of characters for the header.
