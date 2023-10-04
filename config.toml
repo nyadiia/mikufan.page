@@ -102,21 +102,23 @@ stylesheets = ["buttons.css"]
 # Default config, allows for https remote images and embedding YouTube and Vimeo content.
 # This configuration (along with the right webserver settings) gets an A+ in Mozilla's Observatory: https://observatory.mozilla.org
 allowed_domains = [
-    { directive = "connect-src", domains = ["https://miku.goatcounter.com/count"] },
     { directive = "font-src", domains = ["'self'", "data:"] },
-    { directive = "img-src", domains = ["'self'", "https://*", "data:", "https://miku.goatcounter.com/count"] },
-    { directive = "script-src", domains = ["'self'", "https://gc.zgo.at"] }, # finally made csp work for this
+    { directive = "img-src", domains = ["'self'", "https://*", "data:"] },
+    { directive = "script-src", domains = ["'self'"] }, # finally made csp work for this
     { directive = "style-src", domains = ["'self'"] },
     { directive = "frame-src", domains = ["https://www.youtube-nocookie.com"] },
 ]
+[extra.analytics]
+service = "goatcounter"
+id = "miku"
 
 [extra.hyvortalk]
 enabled_for_all_posts = true
 automatic_loading = true
 website_id = "9690"
-page_id_is_slug = false
+page_id_is_slug = true
 lang = ""
-page_author = "bnlhZGlpYUBwbS5tZQ=="  # Email (or base64 encoded email) of the author.
+page_author = ""  # Email (or base64 encoded email) of the author.
 lazy_loading = true
 
 # [extra.isso]
