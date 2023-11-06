@@ -108,6 +108,7 @@ allowed_domains = [
     { directive = "style-src", domains = ["'self'"] },
     { directive = "frame-src", domains = ["https://www.youtube-nocookie.com"] },
 ]
+
 [extra.analytics]
 service = "goatcounter"
 id = "miku"
