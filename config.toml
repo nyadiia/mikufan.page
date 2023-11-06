@@ -7,9 +7,7 @@ generate_feed = true
 compile_sass = true
 minify_html = true
 
-taxonomies = [
-    {name = "tags", feed = true},
-]
+taxonomies = [{ name = "tags", feed = true }]
 
 [markdown]
 external_links_target_blank = true
@@ -71,10 +69,10 @@ email = "bnlhZGlpYUBwbS5tZQ=="
 encode_plaintext_email = true
 
 remote_repository_url = "https://github.com/nyadiia/mikufan.page"
-remote_repository_git_platform = "auto"  # Defaults to "auto".
-remote_repository_branch = "main"  # Defaults to "main".
+remote_repository_git_platform = "auto"                           # Defaults to "auto".
+remote_repository_branch = "main"                                 # Defaults to "main".
 
-show_remote_changes = true  # Defaults to true.
+show_remote_changes = true # Defaults to true.
 show_remote_source = true  # Defaults to true.
 
 # Add a "copy" button to codeblocks (loads ~700 bytes of JavaScript).
@@ -102,30 +100,34 @@ stylesheets = ["buttons.css"]
 # Default config, allows for https remote images and embedding YouTube and Vimeo content.
 # This configuration (along with the right webserver settings) gets an A+ in Mozilla's Observatory: https://observatory.mozilla.org
 allowed_domains = [
-    { directive = "font-src", domains = ["'self'", "data:"] },
-    { directive = "img-src", domains = ["'self'", "https://*", "data:"] },
-    { directive = "script-src", domains = ["'self'"] }, # finally made csp work for this
-    { directive = "style-src", domains = ["'self'"] },
-    { directive = "frame-src", domains = ["https://www.youtube-nocookie.com"] },
+    { directive = "font-src", domains = [
+        "'self'",
+        "data:",
+    ] },
+    { directive = "img-src", domains = [
+        "'self'",
+        "https://*",
+        "data:",
+    ] },
+    { directive = "script-src", domains = [
+        "'self'",
+    ] }, # finally made csp work for this
+    { directive = "style-src", domains = [
+        "'self'",
+    ] },
+    { directive = "frame-src", domains = [
+        "https://www.youtube-nocookie.com",
+    ] },
 ]
 
 [extra.analytics]
 service = "goatcounter"
 id = "miku"
 
-[extra.hyvortalk]
-enabled_for_all_posts = false
-automatic_loading = true
-website_id = "9690"
-page_id_is_slug = true
-lang = ""
-page_author = ""  # Email (or base64 encoded email) of the author.
-lazy_loading = true
-
 [extra.isso]
 enabled_for_all_posts = true
 automatic_loading = true
-endpoint_url = "https://mikufan.page/.isso/"  # URL to Isso host.
+endpoint_url = "https://mikufan.page/.isso/" # URL to Isso host.
 page_id_is_slug = true
 lang = "english"
 max_comments_top = "inf"
@@ -134,7 +136,6 @@ avatar = true
 voting = true
 page_author_hashes = ""
 lazy_loading = true
-
 
 # Custom subset of characters for the header.
 # If set to true, the `static/custom_subset.css` file will be loaded first.
