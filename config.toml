@@ -125,7 +125,7 @@ lazy_loading = true
 [extra.isso]
 enabled_for_all_posts = true
 automatic_loading = true
-endpoint_url = "https://isso:8080/"  # URL to Isso host.
+endpoint_url = "https://mikufan.page/.isso"  # URL to Isso host.
 page_id_is_slug = true
 lang = "english"
 max_comments_top = "inf"
