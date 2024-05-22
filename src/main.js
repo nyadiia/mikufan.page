@@ -1,5 +1,9 @@
 window.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll('[role="tab"]');
+  /**
+   * The tab list element.
+   * @type {Element}
+   */
   const tabList = document.querySelector('[role="tablist"]');
 
   // Add a click event handler to each tab
@@ -33,8 +37,15 @@ window.addEventListener("DOMContentLoaded", () => {
       tabs[tabFocus].focus();
     }
   });
+
+  document.body.addEventListener("click", play);
+  makeDraggable(document.querySelector("#main-window"));
 });
 
+/**
+ * Event handler for changing tabs.
+ * @param {Event} e - The event object.
+ */
 function changeTabs(e) {
   const target = e.target;
   const parent = target.parentNode;
@@ -59,8 +70,63 @@ function changeTabs(e) {
     .removeAttribute("hidden");
 }
 
-function addEvent() {
-  document.body.addEventListener("click", play);
+/**
+ * Makes an element draggable.
+ * @param {HTMLElement} element - The element to make draggable.
+ */
+function makeDraggable(element) {
+  let currentPosX = 0;
+  let currentPosY = 0;
+  let previousPosX = 0;
+  let previousPosY = 0;
+
+  if (!element) {
+    return;
+  }
+
+  if (window.matchMedia("screen and (max-width: 600px)").matches) {
+    return;
+  }
+
+  if (element.querySelector(".title-bar")) {
+    element.querySelector(".title-bar").onmousedown = dragMouseDown;
+  } else {
+    element.onmousedown = dragMouseDown;
+  }
+
+  /**
+   * Event handler for when the mouse button is pressed down.
+   * @param {MouseEvent} e - The mouse event object.
+   */
+  function dragMouseDown(e) {
+    e.preventDefault();
+    previousPosX = e.clientX;
+    previousPosY = e.clientY;
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  /**
+   * Event handler for when the mouse is moved.
+   * @param {MouseEvent} e - The mouse event object.
+   */
+  function elementDrag(e) {
+    e.preventDefault();
+    currentPosX = previousPosX - e.clientX;
+    currentPosY = previousPosY - e.clientY;
+    previousPosX = e.clientX;
+    previousPosY = e.clientY;
+    element.style.top = element.offsetTop - currentPosY + "px";
+    element.style.left = element.offsetLeft - currentPosX + "px";
+  }
+
+  /**
+   * Event handler for when the mouse button is released.
+   */
+  function closeDragElement() {
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
 }
 
 function play() {

@@ -5,6 +5,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="mikufan.page" />
+    <meta name="author" content="nyadiia" />
+    <meta name="theme-color" content="#ff0066" />
+
+    <link rel="icon" href="favicon.ico" />
 
     <!-- Windows XP Theme (include only one theme at a time) -->
     <link rel="stylesheet" href="https://unpkg.com/xp.css" />
@@ -13,17 +18,18 @@
     <!-- <link rel="stylesheet" href="https://unpkg.com/xp.css@0.2.3/dist/98.css" />
      -->
     <link href="./main.css" rel="stylesheet" type="text/css" media="screen" />
-    <script src="main.js"></script>
+
+    <script type="module" src="main.js"></script>
   </head>
   
-  <body onload="addEvent()">
+  <body>
     <audio id="audio" src="click.mp3"></audio>
-    <div class="main-container">
-      <div class="window" style="width: 400px">
+    <!-- <div class="main-container"> -->
+      <div id="main-window" class="window">
         <div class="title-bar">
           <div class="title-bar-text">mikufan.page</div>
           <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
+            <!-- <button aria-label="Minimize" disabled></button> -->
             <button aria-label="Maximize"></button>
             <button aria-label="Close"></button>
           </div>
@@ -39,7 +45,7 @@
             <article role="tabpanel" id="home">
               <h3>Welcome to my site!</h3>
               <p>
-                this is my funny little website where i might make blog posts on some things. i'm mosstly just busy with my computer engineering major but hopefully i become more <code>real</code>. if you have any recommendations on what i should make or what I should watch, please tell me!
+                this is my funny little website where i might make blog posts on some things. i'm mosstly just busy with my computer engineering major but hopefully i become more <code class="nocopy">real</code>. if you have any recommendations on what i should make or what I should watch, please tell me!
               </p>
               <h4>Recent Posts</h4>
               <ul style="list-style: none; padding: 0;">
@@ -79,6 +85,7 @@
           </section>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
   </body>
+  
 </html>

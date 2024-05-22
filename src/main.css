@@ -42,3 +42,24 @@ body {
 .window, .title-bar-text {
     font-size: 16px;
 }
+
+.window {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 600px;
+}
+
+.title-bar {
+    cursor: move;
+}
+
+@media screen and (max-width: 600px) {
+    .window {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        width: calc(100% - 1rem);
+        height: calc(100% - 2rem);
+    }
+}
