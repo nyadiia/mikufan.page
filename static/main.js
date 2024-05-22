@@ -38,7 +38,8 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.body.addEventListener("click", play);
+  document.body.addEventListener("mousedown", play(1));
+  document.body.addEventListener("mouseup", play(0));
   makeDraggable(document.querySelector("#main-window"));
 });
 
@@ -129,7 +130,21 @@ function makeDraggable(element) {
   }
 }
 
-function play() {
-  var audio = document.getElementById("audio");
-  audio.play();
+/**
+ * Plays a sound effect.
+ * @param {number} event - The event type.
+ * @returns {Function} - The function to play the sound effect.
+ */
+function play(event) {
+  if (event) {
+    return () => {
+      const audio = document.getElementById("clickPress");
+      audio.play();
+    };
+  } else {
+    return () => {
+      const audio = document.getElementById("clickRelease");
+      audio.play();
+    };
+  }
 }

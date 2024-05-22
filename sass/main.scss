@@ -1,36 +1,39 @@
-h1 {
-    font-size: 2.5rem;
-    margin: 0.5rem 0;
-}
-h2 {
-    font-size: 2rem;
-    margin: 0.5rem 0;
-}
-h3 {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-}
-h4 {
-    font-size: 1.25rem;
-    margin: 0.5rem 0;
-}
-h5 {
-    font-size: 1rem;
+
+h1, h2, h3, h4, h5, a {
     margin: 0.5rem 0;
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
 body {
-    background-image: linear-gradient(blue, black);
-    background-attachment: fixed;
-    height: 100vh;
-    width: 100vw;
+    background: linear-gradient(blue, black) fixed;
+    height: 100;
+    width: 100;
 }
 
 .main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: left;;
+    text-align: left;
     width: 75%;
     margin: 3rem auto;
 }
@@ -48,18 +51,26 @@ body {
     top: 25%;
     left: 25%;
     width: 600px;
-}
 
-.title-bar {
-    cursor: move;
-}
-
-@media screen and (max-width: 600px) {
-    .window {
+    @media screen and (max-width: 600px) {
         position: absolute;
         top: 0.5rem;
         left: 0.5rem;
         width: calc(100% - 1rem);
         height: calc(100% - 2rem);
+    }
+}
+
+.title-bar {
+    cursor: move;
+    @media screen and (max-width: 600px) {
+        cursor: default;
+    }
+}
+
+.title-bar-controls {
+    cursor: pointer;
+    @media screen and (max-width: 600px) {
+        cursor: default;
     }
 }

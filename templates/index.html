@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>mikufan.page</title>
+    <title>{{ config.title | safe }}</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,13 +17,15 @@
     <!-- Windows 98 Theme (include only one theme at a time) -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/xp.css@0.2.3/dist/98.css" />
      -->
-    <link href="./main.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
 
-    <script type="module" src="main.js"></script>
+    <script type="module" type="text/javascript" src="main.js"></script>
   </head>
   
   <body>
-    <audio id="audio" src="click.mp3"></audio>
+    <audio id="clickPress" src="clickPress.mp3"></audio>
+    <audio id="clickRelease" src="clickRelease.mp3"></audio>
+    <audio id="clickQuick" src="click.mp3"></audio>
     <!-- <div class="main-container"> -->
       <div id="main-window" class="window">
         <div class="title-bar">
@@ -43,14 +45,9 @@
             </menu>
             <!-- the tab content -->
             <article role="tabpanel" id="home">
-              <h3>Welcome to my site!</h3>
-              <p>
-                this is my funny little website where i might make blog posts on some things. i'm mosstly just busy with my computer engineering major but hopefully i become more <code class="nocopy">real</code>. if you have any recommendations on what i should make or what I should watch, please tell me!
-              </p>
-              <h4>Recent Posts</h4>
-              <ul style="list-style: none; padding: 0;">
-                <li>nothing yet</li>
-              </ul>
+              {% block main_content %}
+                Nothing here?!
+              {% endblock main_content %}
             </article>
             <article role="tabpanel" hidden id="archive">
               <h3>All posts</h3>

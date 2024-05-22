@@ -1,0 +1,33 @@
+{% extends "index.html" %} {% block main_content %} {{ section.content | safe }}
+{% if section.extra.section_path -%} {% set extra_section =
+get_section(path=section.extra.section_path) %} {% endif -%} {% if
+section.extra.section_path -%} {% set path = section.extra.section_path |
+replace(from="/_index.md", to = "") %} {% else -%} {% set path = section.path %}
+{% endif -%}
+
+<div id="posts-list">
+  <div>
+    <h2 class="title-container section-title bottom-divider">
+      {{ section.title }}
+    </h2>
+  </div>
+
+  {%- if paginator %} {%- set pages = paginator.pages -%} {% else %} {%- set
+  pages = extra_section.pages -%} {% endif -%} {% set max_posts =
+  section.extra.max_posts | default(value=999999) %}
+  <div class="posts">
+    {% for page in pages %}
+    <article class="post">
+      <h3>{{ page.title | safe}}</h3>
+      <div class="post__summary" style="margin-bottom: 0.25rem">
+        {{ page.description | safe }}
+      </div>
+      <div class="read-more">
+        <a href="{{ page.permalink }}">Read more...</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock main_content %}
