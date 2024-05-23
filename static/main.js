@@ -1,3 +1,7 @@
+import { a } from "./test.js";
+
+console.log(a);
+
 window.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll('[role="tab"]');
   /**
@@ -71,6 +75,12 @@ function changeTabs(e) {
     .removeAttribute("hidden");
 }
 
+const isWindowTooSmall = window.matchMedia("screen and (max-width: 600px)");
+
+isWindowTooSmall.addEventListener("change", e => {
+  makeDraggable(document.querySelector("#main-window"))
+})
+
 /**
  * Makes an element draggable.
  * @param {HTMLElement} element - The element to make draggable.
@@ -85,7 +95,7 @@ function makeDraggable(element) {
     return;
   }
 
-  if (window.matchMedia("screen and (max-width: 600px)").matches) {
+  if (isWindowTooSmall.matches) {
     return;
   }
 
