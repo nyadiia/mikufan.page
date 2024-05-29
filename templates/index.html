@@ -10,79 +10,86 @@
     <meta name="theme-color" content="#ff0066" />
 
     <link rel="icon" href="favicon.ico" />
-
-    <!-- Windows XP Theme (include only one theme at a time) -->
     <link rel="stylesheet" href="https://unpkg.com/xp.css" />
-
-    <!-- Windows 98 Theme (include only one theme at a time) -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/xp.css@0.2.3/dist/98.css" />
-     -->
     <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
 
     <script type="module" type="text/javascript" src="main.js"></script>
   </head>
-  
+
   <body>
     <audio id="clickPress" src="clickPress.mp3"></audio>
     <audio id="clickRelease" src="clickRelease.mp3"></audio>
     <audio id="clickQuick" src="click.mp3"></audio>
-    <!-- <div class="main-container"> -->
-      <div id="main-window" class="window">
-        <div class="title-bar">
-          <div class="title-bar-text">mikufan.page</div>
-          <div class="title-bar-controls">
-            <!-- <button aria-label="Minimize" disabled></button> -->
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
-          </div>
-        </div>
-        <div class="window-body">
-          <section class="tabs" style="max-width: 600px">
-            <menu role="tablist" aria-label="Sample Tabs">
-              <button role="tab" aria-selected="true" aria-controls="home">Home</button>
-              <button role="tab" aria-controls="archive">Archive</button>
-              <button role="tab" aria-controls="links">Links</button>
-            </menu>
-            <!-- the tab content -->
-            <article role="tabpanel" id="home">
-              {% block main_content %}
-                Nothing here?!
-              {% endblock main_content %}
-            </article>
-            <article role="tabpanel" hidden id="archive">
-              <h3>All posts</h3>
-              <img src="under-construction.gif" style="width: 100%;" alt="under construction" />
-              <p>work in progress ( going to port this site to zola )</p>
-            
-            </article>
-            <article role="tabpanel" hidden id="links">
-              <h3>oomfie sites</h3>
-              <p>i like these people :3</p>
-              <ul>
-                <li><a href="https://autumns.page">autumns.page</a></li>
-                <li><a href="https://kholo.moe">kholo.moe</a></li>
-                <li><a href="https://zackerthescar.com">zackerthescar.com</a></li>
-                <li><a href="https://keltono.netz">keltono.net</a></li>
-              </ul>
-              <h3>inspirations and cool places</h3>
-              <p>either in general or for this site design</p>
-              <ul>
-                <li><a href="https://autumns.page">my good friend autumn's website</a> is a massive inspiration for this website. she is going for a NeXTSTEP feel but i like the general vibe of old computer ui in a website</li>
-              </ul>
-            </article>
-            <article role="tabpanel" hidden id="contact">
-              <h3>contact info</h3>
-              <img src="under-construction.gif" style="width: 100%;" alt="under construction" />
-              <p>work in progress ( need to figure out what stuff to put here )</p>
-            </article>
-            <noscript>
-              <p>JS is required for tab functionality</p>
-              <progress max="100" value="70" style="width:100%;"></progress>
-            </noscript>
-          </section>
+    <div id="main-window" class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">mikufan.page</div>
+        <div class="title-bar-controls">
+          <!-- <button aria-label="Minimize"></button> -->
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
         </div>
       </div>
-    <!-- </div> -->
+      <div class="window-body">
+        <section class="tabs" style="max-width: 600px">
+          <menu role="tablist" aria-label="Sample Tabs">
+            <button role="tab" aria-selected="true" aria-controls="home">
+              Home
+            </button>
+            <button role="tab" aria-controls="archive">Archive</button>
+            <button role="tab" aria-controls="links">Links</button>
+          </menu>
+          <!-- the tab content -->
+          <article role="tabpanel" id="home">
+            {% block main_content %} Nothing here?! {% endblock main_content %}
+          </article>
+          <article role="tabpanel" hidden id="archive">
+            <h3>All posts</h3>
+            <img
+              src="under-construction.gif"
+              style="width: 100%"
+              alt="under construction"
+            />
+            <p>work in progress ( going to port this site to zola )</p>
+          </article>
+          <article role="tabpanel" hidden id="links">
+            <h3>oomfie sites</h3>
+            <p>i like these people :3</p>
+            <ul>
+              <li><a href="https://autumns.page">autumns.page</a></li>
+              <li><a href="https://kholo.moe">kholo.moe</a></li>
+              <li><a href="https://zackerthescar.com">zackerthescar.com</a></li>
+              <li><a href="https://keltono.netz">keltono.net</a></li>
+            </ul>
+            <h3>inspirations and cool places</h3>
+            <p>either in general or for this site design</p>
+            <ul>
+              <li>
+                <a href="https://autumns.page"
+                  >my good friend autumn's website</a
+                >
+                is a massive inspiration for this website. she is going for a
+                NeXTSTEP feel but i like the general vibe of old computer ui in
+                a website
+              </li>
+            </ul>
+          </article>
+          <article role="tabpanel" hidden id="contact">
+            <h3>contact info</h3>
+            <img
+              src="under-construction.gif"
+              style="width: 100%"
+              alt="under construction"
+            />
+            <p>
+              work in progress ( need to figure out what stuff to put here )
+            </p>
+          </article>
+          <noscript>
+            <p>JS is required for tab functionality</p>
+            <progress max="100" value="70" style="width: 100%"></progress>
+          </noscript>
+        </section>
+      </div>
+    </div>
   </body>
-  
 </html>
